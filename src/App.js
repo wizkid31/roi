@@ -123,7 +123,7 @@ const App = () => {
             </Row>
             <Row
               style={{
-                backgroundColor: "#F0F5FD",
+                backgroundColor: "#f6f9fe",
                 margin: "10px auto",
                 verticalAlign: "center",
                 paddingRight: 3,
@@ -187,7 +187,7 @@ const App = () => {
             </Row>
             <Row
               style={{
-                backgroundColor: "#F0F5FD",
+                backgroundColor: "#F6f9fe",
                 margin: "10px auto",
                 verticalAlign: "center",
                 paddingRight: 3,
@@ -251,7 +251,7 @@ const App = () => {
             </Row>
             <Row
               style={{
-                backgroundColor: "#F0F5FD",
+                backgroundColor: "#F6f9fe",
                 margin: "10px auto 0px auto",
                 verticalAlign: "center",
                 paddingRight: 3,
@@ -295,7 +295,7 @@ const App = () => {
             </Row>
             <Row
               style={{
-                backgroundColor: "#F0F5FD",
+                backgroundColor: "#F6f9fe",
                 margin: "10px auto 14px auto",
                 verticalAlign: "center",
                 paddingRight: 3,
@@ -375,7 +375,7 @@ const App = () => {
             {/* ------------------------------------- */}
             <Row
               style={{
-                backgroundColor: "#F0F5FD",
+                backgroundColor: "#f6f9fe",
                 margin: "10px auto 0px auto",
                 verticalAlign: "center",
                 paddingRight: 7,
