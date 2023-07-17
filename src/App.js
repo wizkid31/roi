@@ -17,25 +17,44 @@ const App = () => {
     "Discover + Connect",
     "(Autodialer, Email Sequences, AI Generated Emails, AI Call Coaching)",
   ];
+  const [demosPerRep, setDemosPerRep] = useState(0);
+  const [discover, setDiscover] = useState(0);
+  const [discoverNconnect, setDiscoverNconnect] = useState(0);
   const [inputs, setInputs] = useState({
     reps: 0,
-    demosPerRep: 0,
     cr: 0,
     sc: 0,
     aa: 0,
     increaseDemos: 0,
   });
-  const handleChangeInput = (event, value, name) => {
+  const handleChangeInput = (event) => {
     setInputs({
       ...inputs,
       [event.target.name]: Number(event.target.value),
     });
   };
-
+  const handle1 = (event) => {
+    const value = Number(event.target.value);
+    setDemosPerRep(value);
+    setDiscover(2 * value);
+    setDiscoverNconnect(3 * value);
+  };
+  const handle2 = (event) => {
+    const value = Number(event.target.value);
+    setDemosPerRep(value / 2);
+    setDiscover(value);
+    setDiscoverNconnect(1.5 * value);
+  };
+  const handle3 = (event) => {
+    const value = Number(event.target.value);
+    setDemosPerRep(value / 3);
+    setDiscover(value / 1.5);
+    setDiscoverNconnect(value);
+  };
   const calculateCV = () => {
     const ans =
       inputs.reps *
-      inputs.demosPerRep *
+      demosPerRep *
       (inputs.cr / 100) *
       (11 - inputs.sc) *
       inputs.aa;
@@ -45,7 +64,7 @@ const App = () => {
     const ans =
       inputs.reps *
       2 *
-      inputs.demosPerRep *
+      demosPerRep *
       (inputs.cr / 100) *
       (11 - inputs.sc) *
       inputs.aa;
@@ -55,7 +74,7 @@ const App = () => {
     const ans =
       inputs.reps *
       3 *
-      inputs.demosPerRep *
+      demosPerRep *
       (inputs.cr / 100) *
       (11 - inputs.sc) *
       inputs.aa;
@@ -98,6 +117,8 @@ const App = () => {
             </Col>
             <Col style={{ padding: "4px 0px 4px 0px" }}>
               <input
+                min="0"
+                className="inputs"
                 type="number"
                 onChange={handleChangeInput}
                 style={{
@@ -137,8 +158,10 @@ const App = () => {
               </Col>
               <Col style={{ padding: "4px 0px 4px 0px" }}>
                 <input
+                  min="0"
+                  className="inputs"
                   type="number"
-                  onChange={handleChangeInput}
+                  onChange={handle1}
                   style={{
                     fontFamily: "PlusJakartaSans-SemiBold",
                     color: "#1c3b71",
@@ -149,7 +172,7 @@ const App = () => {
                     fontSize: 19,
                   }}
                   name="demosPerRep"
-                  value={inputs.demosPerRep}
+                  value={demosPerRep}
                 />
               </Col>
             </Row>
@@ -169,6 +192,8 @@ const App = () => {
               </Col>
               <Col style={{ padding: "4px 0px 4px 0px" }}>
                 <input
+                  min="0"
+                  className="inputs"
                   type="number"
                   onChange={handleChangeInput}
                   style={{
@@ -201,6 +226,8 @@ const App = () => {
               </Col>
               <Col style={{ padding: "4px 0px 4px 0px" }}>
                 <input
+                  min="0"
+                  className="inputs"
                   type="number"
                   onChange={handleChangeInput}
                   style={{
@@ -233,6 +260,8 @@ const App = () => {
               </Col>
               <Col style={{ padding: "4px 0px 4px 0px" }}>
                 <input
+                  min="0"
+                  className="inputs"
                   type="number"
                   onChange={handleChangeInput}
                   style={{
@@ -313,6 +342,8 @@ const App = () => {
               </Col>
               <Col style={{ padding: "4px 0px 4px 0px" }}>
                 <input
+                  min="0"
+                  className="inputs"
                   type="number"
                   onChange={handleChangeInput}
                   style={{
@@ -353,23 +384,24 @@ const App = () => {
                 <span style={{ fontSize: 14 }}>{fields[8]}</span>
               </Col>
               <Col style={{ padding: "4px 0px 4px 0px" }}>
-                <span
+                <input
+                  min="0"
+                  className="inputs"
+                  type="number"
+                  onChange={handle2}
                   style={{
                     fontFamily: "PlusJakartaSans-SemiBold",
                     color: "#1c3b71",
+                    width: "60%",
                     textAlign: "right",
                     border: "none",
                     float: "right",
                     fontSize: 19,
-                    width: "60%",
                     height: "100%",
-                    backgroundColor: "#fff",
-                    paddingRight: 15,
-                    lineHeight: 3.5,
                   }}
-                >
-                  {2 * inputs.demosPerRep}
-                </span>
+                  name="discover"
+                  value={discover}
+                />
               </Col>
             </Row>
             {/* ------------------------------------- */}
@@ -396,23 +428,24 @@ const App = () => {
                 <span style={{ fontSize: 14 }}>{fields[10]}</span>
               </Col>
               <Col style={{ padding: "4px 0px 4px 0px" }}>
-                <span
+                <input
+                  min="0"
+                  className="inputs"
+                  type="number"
+                  onChange={handle3}
                   style={{
                     fontFamily: "PlusJakartaSans-SemiBold",
                     color: "#1c3b71",
+                    width: "60%",
                     textAlign: "right",
                     border: "none",
                     float: "right",
                     fontSize: 19,
-                    width: "60%",
                     height: "100%",
-                    backgroundColor: "#fff",
-                    paddingRight: 15,
-                    lineHeight: 3.5,
                   }}
-                >
-                  {3 * inputs.demosPerRep}
-                </span>
+                  name="discoverNconnect"
+                  value={discoverNconnect}
+                />
               </Col>
             </Row>
           </Col>
