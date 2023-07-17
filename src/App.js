@@ -458,7 +458,7 @@ const App = () => {
             padding: "8px",
           }}
         >
-          <Row style={{ position: "relative" }}>
+          <Row>
             <p
               style={{
                 textAlign: "center",
@@ -472,7 +472,6 @@ const App = () => {
           </Row>
           {/* ------min col--------- */}
           <Col
-            span={{ lg: 6 }}
             style={{
               margin: "5px",
               borderRadius: 4,
@@ -498,23 +497,18 @@ const App = () => {
             $ {calculateMin()}
           </Col>
           <span
-            style={{
-              position: "absolute",
-              left: "48.2%",
-              top: "73%",
-              backgroundColor: "#f0f5fd",
-              height: 35,
-              width: 35,
-              fontSize: 20,
-              textAlign: "center",
-              borderRadius: "50%",
-            }}
+            className="pos"
+            // style={{
+            //   backgroundColor: "#f0f5fd",
+            //   fontSize: 20,
+            //   textAlign: "center",
+            //   borderRadius: "50%",
+            // }}
           >
             -
           </span>
-          {/* ------max col-------- */}
+          {/* ------max col--------*/}
           <Col
-            lg={{ span: 6 }}
             style={{
               borderRadius: 4,
               textAlign: "center",
