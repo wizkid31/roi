@@ -3,23 +3,23 @@
   -webkit-appearance: none;
   appearance: none;
   -moz-appearance: none;
-  margin: 0;
-  padding-right: 15px;
+  display: none;
 }
-.pos {
+.inputs {
+  padding-right: 15px;
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+.cols::after {
+  background: #f0f5fd;
   position: absolute;
-  bottom: 13.2%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #f0f5fd;
-  font-size: 20px;
+  content: "-";
+  text-align: center;
+  vertical-align: middle;
   height: 35px;
   width: 35px;
-  text-align: center;
   border-radius: 50%;
-}
-@media (min-width: 1553px) {
-  .pos {
-    bottom: 11.5%;
-  }
+  left: 48.7%;
 }

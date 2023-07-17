@@ -36,19 +36,19 @@ const App = () => {
   const handle1 = (event) => {
     const value = Number(event.target.value);
     setDemosPerRep(value);
-    setDiscover(2 * value);
-    setDiscoverNconnect(3 * value);
+    setDiscover((2 * value).toFixed(0));
+    setDiscoverNconnect((3 * value).toFixed(0));
   };
   const handle2 = (event) => {
     const value = Number(event.target.value);
-    setDemosPerRep(value / 2);
+    setDemosPerRep((value / 2).toFixed(0));
     setDiscover(value);
-    setDiscoverNconnect(1.5 * value);
+    setDiscoverNconnect((1.5 * value).toFixed(0));
   };
   const handle3 = (event) => {
     const value = Number(event.target.value);
-    setDemosPerRep(value / 3);
-    setDiscover(value / 1.5);
+    setDemosPerRep((value / 3).toFixed(0));
+    setDiscover((value / 1.5).toFixed(0));
     setDiscoverNconnect(value);
   };
   const calculateCV = () => {
@@ -481,6 +481,7 @@ const App = () => {
               fontFamily: "PlusJakartaSans-Bold",
               background: "linear-gradient(90deg, #616680 11%, #fff 11%)",
             }}
+            className="cols"
           >
             <span
               style={{
@@ -496,7 +497,7 @@ const App = () => {
             </span>
             $ {calculateMin()}
           </Col>
-          <span
+          {/* <span
             className="pos"
             // style={{
             //   backgroundColor: "#f0f5fd",
@@ -506,7 +507,7 @@ const App = () => {
             // }}
           >
             -
-          </span>
+          </span> */}
           {/* ------max col--------*/}
           <Col
             style={{
