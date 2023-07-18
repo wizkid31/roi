@@ -331,33 +331,15 @@ const App = () => {
               }}
             >
               <Col
-                lg={{ span: 8 }}
+                lg={{ span: 12 }}
                 style={{
                   color: "#616680",
                   paddingTop: 5,
+                  paddingBottom: 5,
                   fontSize: 16,
                 }}
               >
                 {fields[6]}
-              </Col>
-              <Col style={{ padding: "4px 0px 4px 0px" }}>
-                <input
-                  min="0"
-                  className="inputs"
-                  type="number"
-                  onChange={handleChangeInput}
-                  style={{
-                    fontFamily: "PlusJakartaSans-SemiBold",
-                    color: "#1c3b71",
-                    width: "60%",
-                    textAlign: "right",
-                    border: "none",
-                    float: "right",
-                    fontSize: 19,
-                  }}
-                  name="increaseDemos"
-                  value={inputs.increaseDemos}
-                />
               </Col>
             </Row>
             {/* -------------------------- */}
