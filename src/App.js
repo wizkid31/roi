@@ -461,22 +461,10 @@ const App = () => {
               padding: "10px 10px 10px 20px",
               fontSize: 20,
               fontFamily: "PlusJakartaSans-Bold",
-              background: "linear-gradient(90deg, #616680 11%, #fff 11%)",
+              background: "#fff",
             }}
             className="cols"
           >
-            <span
-              style={{
-                float: "left",
-                backgroundColor: "#616680",
-                color: "#fff",
-                fontFamily: "PlusJakartaSans-Medium",
-                height: "100%",
-                textAlign: "center",
-              }}
-            >
-              Min
-            </span>
             $ {calculateMin()}
           </Col>
           {/* <span
@@ -499,21 +487,9 @@ const App = () => {
               fontSize: 20,
               margin: "5px",
               fontFamily: "PlusJakartaSans-Bold",
-              background: "linear-gradient(to left, #616680 12%, #fff 12%)",
+              background: "#fff",
             }}
           >
-            <span
-              style={{
-                float: "right",
-                backgroundColor: "#616680",
-                color: "#fff",
-                fontFamily: "PlusJakartaSans-Medium",
-                height: "100%",
-                textAlign: "center",
-              }}
-            >
-              Max
-            </span>
             $ {calculateMax()}
           </Col>
         </Row>
